@@ -65,7 +65,7 @@ def create_node(data, metadata):
 # ---------- Print Tree ----------
 def print_tree(node, level=0):
     if node.answer != "":
-        print(" " * level + "→ " + node.answer)
+        print(" " * level + " " + node.answer)
         return
     print(" " * level + "[" + node.attribute + "]")
     for value, child in node.children:
