@@ -1,0 +1,1 @@
+implement naive bayesian classifier for tennis dataset and to compute accuracy ,problem player will play if whether is sunny is statement is correct in python use sklearn and pandas to solve this
