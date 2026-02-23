@@ -1,4 +1,4 @@
-Outlook,Temperature,Humidity,Wind,answer
+Outlook,Temperature,Humidity,Wind,Play
 Sunny,Hot,High,Weak,No
 Sunny,Hot,High,Strong,No
 Overcast,Hot,High,Weak,Yes
@@ -13,3 +13,4 @@ Sunny,Mild,Normal,Strong,Yes
 Overcast,Mild,High,Strong,Yes
 Overcast,Hot,Normal,Weak,Yes
 Rain,Mild,High,Strong,No
+
