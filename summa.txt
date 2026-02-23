@@ -1,1 +1,7 @@
 implement naive bayesian classifier for tennis dataset and to compute accuracy ,problem player will play if whether is sunny is statement is correct in python use sklearn and pandas to solve this
+
+algorithm:
+convertdata set into frequency table
+create likelyhood table by finding probability like overcast probability =0.29
+use naive basyeian equation to calculte posterior probablity for each class
+class with highest posterior probabilty is outcome of prediction
