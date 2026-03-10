@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import CategoricalNB
 from sklearn.metrics import accuracy_score
 data = pd.read_csv("tennis.csv")
@@ -15,10 +16,11 @@ data['Wind'] = le_wind.fit_transform(data['Wind'])
 data['Play'] = le_play.fit_transform(data['Play'])
 X = data[['Outlook', 'Temperature', 'Humidity', 'Wind']]
 y = data['Play']
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
 model = CategoricalNB()
-# Train using full dataset
-model.fit(X, y)
-# Predict on same dataset
-y_pred = model.predict(X)
-accuracy = accuracy_score(y, y_pred)
-print(f"Accuracy:{accuracy:.2f}")
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
